@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+
+        /* don't use this properties as per harry bhaiya but keep knowledge of it
+        if someone ask for it because we use flexbox instead of it */
+        .cards{
+            border: 2px solid black;
+            display: flow-root; /* by using display flow root we get that the image stays in 
+            the border of cards and does'nt overflow */
+        }
+        img{
+            float: left; /* this float allows the next content to be displayed at left side
+            of image in same line */
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: left;/* this clear float make it so that this element does'nt have
+            anything at its left side and can be used similarly for right side and 
+            to clear both side write both*/
+        }
+    </style>
+</head>
+<body>
+    <!-- vs code shortcut to write this whole div is
+     .cards>.card*3 -->
+    <div class="cards">
+        <img height="220px" src="img6.png" alt="">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis quae corrupti sit nemo eveniet ut, numquam similique in beatae. Provident, quae quidem adipisci maxime explicabo aliquam voluptas itaque fuga?</p>
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam consectetur nemo facilis facere perspiciatis ipsum! Nihil, repudiandae. Molestias at, incidunt tenetur repellat temporibus animi aliquam tempora autem fuga porro repellendus.</div>
+        <div class="card">Card3</div>
+    </div>
+</body>
+</html>

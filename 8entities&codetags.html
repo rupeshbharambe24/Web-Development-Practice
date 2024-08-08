@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entities and codetag</title>
+</head>
+<body>
+    <!-- Here we see how to show symbols like copyright on web
+     through html entities -->
+     <p>&lt; <!-- less than -->
+        &gt;   <!-- greater than -->
+        &amp;  <!-- and -->
+        &nbsp; <!-- this is for a non breaking space -->
+        &copy;  <!-- copyright -->
+        
+        
+        <pre>   <!-- pre tag shows the text here as it is on browser -->
+            <p>this is a para $#$@$@</p>
+            <p>It shows          as it is.</p>
+        </pre>
+        <p>it does'nt show                      as it is. &copy;</p>
+
+        <blockquote cite="source-url">Quatation text here</blockquote>
+        <q cite="source-url">Quotation text here.</q>
+        <blockquote cite="https://example.com">
+            This is a long quote from an external source. This quote can span multiple lines and paragraphs.
+        </blockquote>
+        
+        
+        The philosopher said, <q cite="https://example.com">The unexamined life is not worth living.</q>
+        
+        
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Document&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;blockquote cite="source-url"&gt;Quatation text here&lt;/blockquote&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+</body>
+</html>

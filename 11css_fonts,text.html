@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts, text, color</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+
+    <style>
+        /* u can either use link to connect to font or use import to use it */
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
+
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            text-decoration: underline overline;
+
+        }
+        p{
+            font-family: "Playwrite HR Lijeva", cursive;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 4; /* it is used to increase or decrease space
+            betweent the lines */
+            letter-spacing: 5px; /* this is used to adjust the 
+            spaces between letters */
+}
+        h2{
+            text-transform: capitalize; /*it is used to edit the 
+            upper or lower case and capitization and more of words */
+            text-decoration: underline;
+            text-decoration-color: rgb(136, 8, 25);
+            text-decoration-style: wavy;
+            text-decoration-thickness:10px;
+            text-indent: 40px ; 
+            text-align: center;
+        }
+        .lorem{
+            border: 2px solid red;
+            width: 145px;
+            text-overflow: clip;
+            overflow: hidden;
+            word-break: break-all;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <p>This is for fonts</p>
+    </div>
+    <div>
+        <h1>Fonts</h1>
+        <h2>about fonts</h2>
+        <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus iusto, quos sunt iure laudantium quis, nemo quae, cupiditate tempora aspernatur voluptate tempore qui!</p>
+    </div>
+
+</body>
+</html>

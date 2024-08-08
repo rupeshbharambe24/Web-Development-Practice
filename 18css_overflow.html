@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 20vh;
+            border: 2px solid black;
+            /* overflow: scroll; */ /*scroll attribute show scroll bar even
+            if there is no overflow */
+            overflow: auto;
+            /* white-space: nowrap; this takes only horizontal space */
+            text-overflow: ellipsis; /*this shows ... in overflowed para */
+            /* overflow: hidden; */
+            /* if you do ellipsis in text oveflow then ...is shown and para
+            after that disappears */
+            
+            /* you can also control overflow individually */
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+            
+            /* overflow: hidden auto;u can write like this for x and y */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">I am a boy and Lorem ipsum dolor sit amet, consectetur 
+        adipisicing elit. Voluptatem officia excepturi sapiente expedita 
+        eaque aut nulla dolorem inventore, aliquam nisi repellendus minima 
+        amet repudiandae perferendis labore vel, illum, totam eveniet!
+    </div>
+
+</body>
+</html>

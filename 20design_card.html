@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .outbox{
+            background-color:rgb(255, 255, 255);
+            border: 2px solid grey;
+            margin: 40px;
+            padding: 8px;
+            height: 500px;
+            width: 340px;
+            border-radius: 15px;
+            box-shadow: 5px 4px 5px #565151;
+        }
+        
+        .box1{
+            /* border: 2px solid rgb(53, 52, 52); */
+            height: 50%;
+            position: relative;
+            border-radius: 15px;
+        }
+        .box2 ul li{
+            list-style: none;
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 10px;
+            color: grey;
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+        }
+
+        .box2 ul li span{
+            border: 1px solid grey;
+            border-radius: 15px;
+            padding: 6px;
+            
+        }
+
+        img{
+            height: 250px;
+            width: 100%;
+            border-radius: 15px;
+        }
+        .box3{
+            /* border: 2px solid black; */
+            height: 180px;
+            padding: 4px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .box3 span{
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-size: 30px;
+        }
+        .box4{
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            color: grey;
+            margin-top: 12px;
+        }
+        .box5{
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            color: blue;
+            background-color: rgb(167, 235, 249);
+            border-radius: 20px;
+            padding: 10px;
+            width: fit-content;
+            margin-top: 8px;
+            position: absolute;
+            left: 120px;    
+            text-align: center;
+
+            cursor: pointer; /* this make the cursor view like a hand or pointer when hovered 
+            over it */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="outbox">
+        <div class="box1">
+            <img src="img9.png" alt="bird" class="img">
+            <div class="box2">
+                <ul>
+                    <li><span>Jurassic</span></li>
+                    <li><span>Birds</span></li>
+                </ul>
+                <div class="box3">
+                    <span>Jurassic Park</span>
+                    <div class="box4">
+                        Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Reprehenderit sapiente, 
+                        harum ea eum error ex nulla laborum in 
+                        consequuntur vitae fugiat quasi fugit ipsa 
+                        ad nisi quos obcaecati. Maxime, quod.
+                        <div class="box5">
+                            Read More
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

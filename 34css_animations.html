@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: rgb(16, 28, 162);
+            height: 80vh;
+            width: 30vw;
+        }
+        
+        /* for simple animations use transition and for complex use animation */
+        .box{
+            width: 34px;
+            height: 45px;
+            background-color: aqua;
+            /* animation syntax
+            animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-name: myanimation; /* check mdn reference for all types 
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            animation-timing-function: ease-out;
+            animation-delay: 2s;
+            animation-direction: alternate-reverse;
+            /* animation-play-state: paused; it is used to pause or run a animation which is generally 
+            done with javascript */ 
+
+            animation: myanimation 3s ease-out 1s 4 alternate-reverse backwards;
+            /* animation fillmode when we use forwards it will stay at its final destination and it looks the way it is designed
+            and when we  use backwards it goes back to default position  */
+
+            animation: my2 3s ease-in-out 3s 1;
+        }
+
+        /* u can name it anything */
+        @keyframes myanimation{
+            from{
+                background-color: rgb(73, 2, 65);
+            }
+            to{
+                transform: translateX(300px);
+                background-color: rgb(255, 13, 0);
+            }
+        }
+
+        @keyframes my2 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(280deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>

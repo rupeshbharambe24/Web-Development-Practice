@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        /* transform are of two types 2D and 3D in which 2D means moving object 
+        w.r.t. x and y axis and 3D means w.r.t. 3 axis */
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: bisque;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* transform: rotate(40deg);  */
+            /* there is also another unit for angle i.e. turn which is 1 turn = 360deg */
+            /* transform: rotate(0.125turn); */
+            transform: rotate(40deg);
+            /* transform: rotateY(60deg); */
+            /* transform: rotateZ(20deg); */
+
+           /* transform: scale(1.6); /* scale is used to scale the size of element here which means
+            increase size by given no. of times and u can also scale w.r.t particular axis */
+            /* transform: scaleX(1.4);
+            transform: scaleY(1.5); */
+
+            /* transform: skew(10deg); /* skew is use to stretch the element at one side in tirpa 
+            transform: skewY(20deg); */
+
+            /* translate is used to move the element at x or y axis 
+            and translate can be used together translate(x,y);
+            transform: translateX(34px); 
+            transform: translateY(34%); */
+
+            /* u can also use these properties together like
+            transform: translateY(34%) skewX(20deg) translateX(34p%); */
+
+            transform-origin: 30% 0%;/* this is used to change the center point w.r.t. which the
+            rotation is taking place */
+
+        }
+
+        .container{
+            width: 200vw;
+            height: 80vh;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box
+
+        </div>
+    </div>
+</body>
+</html>

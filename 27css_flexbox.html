@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        /* the flexbox properties used in container should only be used for container
+        and properties used in item should only be used for item */
+        .container{
+            border: 2px solid red;
+            display: flex; /* here flex make the five items to lay in same line */
+            height: 80vh;
+            justify-content: center; /* this is used to adjust the content with relative to flex
+            and has center, flex-end, flex-start, space-around, space-between , space evenly,
+             left, right, stretch, inherit, initial, revert */
+            align-items: center;/* this also has similar attributes to justifycontent but
+            is used to adjust position according to vertical axis */
+            /* flex-direction: column;  */
+            /* the flex acts according to flex direction and
+            the default is left to right but can be changed to vertical by using column 
+            and it also has a reverse with using column and row to show reverse items*/
+        
+           /* flex-wrap: wrap; /* when the content overflows the box and gets shrinked by 
+            staying in same  line due to flex-box then using wrap can move items in next line
+            we also have nowrap which is default and wrap reverse */ 
+        
+            align-content: center; /* we use align items when we have content in only 1 line
+            but if we have more than 1 line we use align content to align and it also has similar attributes
+            to justify content like flex-start, flex-end, etc*/
+
+            flex-flow: row wrap;/* flex-flow: <flex-direction><flex-wrap>; */
+            /* this is used to set flex-wrap and direction at same time */
+        
+            gap: 2px;
+             /* this is used to create a space between elements 
+            which creates space for both rows and columns or can also be made for
+            either of row or column with */
+            /* row-gap: 30px; */
+            /* column: 30px; */
+            /* gap: 10px 30px; this can be used to gap for row and column together
+            in which first is row and next column */
+
+        }
+
+        /* the flexbox has two axis i.e. main axis and cross axis which means main axis is left to right
+        and cross axis is top to bottom by default or when flex-direction as row
+        but when we use flex-direction as column then the cross axis becomes left to right
+        and main axis becomes top to bottom a
+        the justify content and align-items acts w.r.t. axis and justify-content centers or moves content
+        w.r.t to main axis and align items w.r.t. cross axis */
+        .item{
+            height: 32px;
+            width: 32px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: violet;
+
+            /* flex-grow: 1; */
+        }
+        
+        .item1{ /* with flex-grow it ensures that every item takes equal space
+            and default felx-grow is 0 and when set to 2 it make that element take 
+            place of 2 items */
+            /* flex-grow: 8; */
+
+            flex-shrink: 2;/* flex-shrink is the ability of flex to shrink if necessary 
+            means that when there is nowrap and when we reduce the screen then instead 
+            of the items moving to next line it ensures that the elements shrink and stay 
+            in same line and having value 2 means shrinking at double speed and so on*/
+
+            align-self: flex-end;/* this make a particular element to align itself at flex-end,
+            flex-start, etc and for it to work u should disable align content */
+        }
+
+        /* order property can be used to set the order of elements 
+        and the element which has highest value is sent to last and the less the
+        value the more first it comes and every elements default order is 0 */
+            .order-1{
+                order: 5;
+            }
+            .order-2{
+                order: 2;
+            }
+            .order-3{
+                order: 3;
+            }
+        
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item order-1">2</div>
+            <div class="item order-2">3</div>
+            <div class="item">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <!-- <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div> -->
+
+        </div>
+    </main>
+</body>
+</html>

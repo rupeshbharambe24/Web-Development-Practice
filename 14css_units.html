@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            margin: 20px auto;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+           /* width: 240px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aqua;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+           /* width: 240px; */
+            width: 80vw; /* vw means view width which adjust acording to the screen size */
+            /*height: 80vh;
+            margin: 24px auto; /* auto mens margin from left and right and the value in px is margin from upside and bottom */
+            background-color: aqua;
+            font-size: 24px;
+            min-height: 80vh; /*it means that the container should stay at min height even if it is empty but should increase in case
+            more content is enterer */
+        }
+        .container > div{
+            font-size: 2em; /* em means that when we dont define font size then some default size is given to fonts
+            like 16px and when we define font size in em then em gets multiplied to the default font size */
+            width: 50%; /*here the para took 50% place*/
+            border: 2px solid red;
+        }
+
+        .container > div > div{
+            border: 2px solid green;
+                width: 50%;
+        }
+        html{
+            font-size: 12px; /* rem means root em which get multiplied to the root font size unlike em which multuplies to its
+            element */
+        }
+
+        .mycont{
+            background-color: blueviolet;
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+           /* width: 100vmin; /* vmin means the dimension of screen which is less like in this laptop screen vmin is height
+                            and vmax and width as it is more while in mobile the vmin is width and vmax is height */
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">this is a box</div>
+    <div class="container">
+        <div> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis autem voluptatum blanditiis nesciunt molestiae rerum modi, voluptas, ab alias rem voluptate iste odio.
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem vel delectus quas et voluptates doloremque labore pariatur corporis blanditiis!</div>
+        </div>
+
+    </div>
+    <div class="mycont">
+        I am new container
+    </div>
+</body>
+</html>

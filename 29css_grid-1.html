@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+
+        /* grid lines are the lines inside a grid which maybe horizontal or vertical 
+        grid cell is the box in a grid similar to cell in excel
+        grid track is space between two grid lines like a row or columns
+        grid area is any area in a grid which may be a combination of cells*/
+
+        .container{
+            /* the display grid and grid template rows and columns should be first defines
+            to use grid functions and the items in grid take full grid cell space if height
+            and width are not defined */
+            border: 2px solid rgb(0, 0, 0);
+            display: grid;
+            /* display grid does'nt make any difference visibly but make it
+            that items gets divided in rows which can be inspected at browser */
+
+            grid-template-columns: [first] 120px [second] 100px [t];/*we can name grid lines like this */
+            /* this creates columns on 120px and 100px each  and fits elements in it */
+            /* in grid we can place any item anywhere at any place and can also overlap */
+            
+            /* grid-template-rows: 100px 100px 100px; */
+        /* u can declare both rows & columns or either of one */
+
+        /* grid-template-columns: 1fr 1fr 1fr;  /*sometimes we need to repeat a value like 
+        1fr so we use grid-template-columns: repeat(4, 1fr) and we can also use minmax function
+        like this grid-template-columns: repeat(4, minmax(100px, 1fr));  which means that the grid will \
+        remain 100px min and 1fr max        */   
+
+        grid-template-columns: repeat(4, 80px);
+        grid-template-columns: repeat(4, 80px);
+
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        /* fr is a unit specifically used for grid which means to equally divide
+        the width so if u write 1fr for 3 times than it means dividing 1/3rd of width and if 4 times it means 1/4th parts */
+            height: 500px;
+            gap: 20px 20px;
+            align-items: center;
+            justify-items: center;
+
+            /* place content make both justify and align content to whatever u set */
+            /* place-content: center; */
+
+            /* we use align and justify content when we want ti move relative to container
+            and use items for grid */
+            
+        }
+
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+            /* width or height should be disabled if you want the element to take up
+            entire grid cell space */
+        }
+
+        .item-4{ /* this makes the item-4 to move wherever we want and the grid row and column
+            is used to define where we want to place it as here the 1/2 means that the item should
+            move where it starts at grid line 1 and ends at grid line 2 */
+            grid-row: 1/2;
+            grid-column: 1/t;
+        }
+        .item-1{/*we use this so item 1 and 4 would stay in same place and overlap */
+            grid-row: 1/2;   /* we can also write it as  */
+            /*grid-row-start: 1;
+            grid-row-end: 2;    */
+
+            grid-column: 1/2; 
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+        }     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

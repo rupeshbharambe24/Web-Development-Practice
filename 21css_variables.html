@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root{
+            --color: blue;
+            --seccolor: rgb(78, 226, 252);
+            /* this helps to define global variable which can be 
+            used to change color for entire page wherever it is applied */
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        ul li{
+            list-style: none;
+            padding: 20px;
+            opacity: 0.5;
+        }
+        ul li:first-child{
+            --color:rgb(27, 240, 27);
+            background-color: var(--color, red);
+            /* here we defined color as local variable when we
+            need different color for something specific 
+            and u can give extra color like here red so if --color 
+            is not accessible then there is a default value*/
+        }
+/* css variables can be used to store and use any data like padding, margin
+color, radius, etc with var() and variable names can be anything u set */        
+        ul{
+            display: flex;/* by using display flex the list elements
+            stay in same line */
+        }
+        .container{
+            background-color:var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate corporis perferendis perspiciatis nostrum, voluptas quidem cum facilis hic unde reiciendis, vitae repudiandae. Nisi unde perspiciatis quis suscipit? Rem, facilis!
+    </div>
+</body>
+</html>

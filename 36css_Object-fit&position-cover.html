@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <style>
+        .container{
+            height: 530px;
+            width: 500px;
+            border: 2px solid black;
+            /* background-color: aqua; */
+            /* bgimage is used to set bg and bg position is used to define which 
+            sided part of image should be shown in box and if the image is smaller than 
+            box then it repeats itself */
+            /* background-position: center center; */
+            background-position: top right;
+            background-image: url("img.png");
+            /* bg repeat is used to either set that image should not repeat or to fix if it
+            should repeat in x or y */
+            /* background-repeat: no-repeat;
+            background-repeat: repeat-y; */
+
+            /* background-clip: border-box; */
+
+        }
+
+        img{
+            width: 500px;
+            height: 530px;
+           
+            /*object-fit: contain; /* this makes the image to stay in original aspect ratio and image it full shown */
+             object-fit: cover;
+            /* using cover means that the image maintains the aspect ratio of that image does'nt 
+            get stretched but it cuts some part of image to do so */
+            /*object-position: left; /* this is used to decide which part of image u want to cut when using cover
+            like top, bottom, left, right, top right, top left, etc */
+            object-position: 10px 15px; /*u can use it like this to leave space from left and top*/
+
+
+           /* object-fit: fill; /* this is default property fills the image according to the size of object u want to fit it in and 
+            full image will be shown but distorted */
+            /* try various different in inspect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="img6.png" alt=""> -->
+
+    </div>
+</body>
+</html>

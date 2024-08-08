@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>\
+    <style>
+        /* .box:first-child{
+            background-color: antiquewhite;
+        } */
+        /* .box::first-line{/* this makes the first line of element to change 
+            however u define and same can be done for first letter 
+            color: rgb(148, 155, 13);
+        } */
+
+        .box::first-letter{
+            color: peru;
+            font-size: 20px;
+        }
+
+        .boxes *{
+            color: aquamarine;
+            border: 2px solid black;
+        }
+
+        /* p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(odd){
+            background-color: blueviolet;
+        } */
+
+        /* .box:nth-last-child(1){
+            background-color: yellowgreen;
+        } */
+
+        .boxes::before{/* through this we can insert an element dynamically through CSS
+            with before and after and these are pseudo elements and not selectors*/
+            content: "What a irony, huh?";
+            color: blueviolet;
+        }
+
+        ::selection{/* this is used to create a look of content when u select them */
+            color: rgb(226, 229, 28);
+            background-color: brown;
+        }
+        
+        input::placeholder{
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <input type="text" placeholder="type your name">
+    </div>
+</body>
+</html>

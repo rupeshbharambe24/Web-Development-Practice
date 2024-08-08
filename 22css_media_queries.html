@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+        @media only screen and (max-width: 440px){
+            body{/* this here means that if the width of screen 
+                is less than 440px then the bgcolor turns to given below */
+
+                /* if we use min-width here than the bgcolor turns to lightcoral when 
+                screen width is more than 440px and vice versa */
+                background-color: lightcoral;
+            }
+        }
+            
+            /* @media not|only mediatype and (expressions)
+            {
+            CSS-code;   
+            } */
+        
+    </style>
+</head>
+<body>
+    <div>
+        Hey I am colored body.
+    </div>
+</body>
+</html>

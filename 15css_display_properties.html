@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            border: 2px solid black;
+            display: inline-block; /*this allows the div which is a block element to act like inline element but 
+            only inline does'nt allow to adjust height and width so we use inline-block*/
+            padding: 45px; /* padding does'nt applies to top if inline  */
+            margin: 34px; /*If you want your Margin,padding,width properly to be settled then use Display property 
+            "inline-block" instead of only "inline" */
+            width: 340px;
+            /* display: none; */
+
+        }
+        /* .box2{ 
+                display: none; 
+                visibility: hidden; 
+         } */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        I am a box
+    </div>
+    <div class="box2">also a better one.</div>
+
+    <span>I am a</span>
+    <span>developer.</span>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            padding: 10px;
+            gap: 40px;
+        }
+  
+        nav{
+            background-color: blueviolet;
+            padding: 15px;
+            color: white;
+            
+        }
+        img{
+            justify-content: start;
+        }
+
+        nav img{
+            padding-right: 650px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="container">
+            <img width="140px" class="nav img" src="logo1.png" alt="">
+            <div class="nav">Products</div>
+            <div class="nav">Pricing</div>
+            <div class="nav">Resources</div>
+            <div class="nav">About Us</div>
+            <div class="nav">Security and Compliance</div>
+           </div>
+        </nav>
+    </header>
+</body>
+</html>

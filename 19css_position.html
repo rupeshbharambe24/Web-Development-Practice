@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            height: 433px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        .box1{
+            background-color: antiquewhite;
+          /*  position: relative;
+            z-index: 1; /* z-index is used if want a element here box to be at front
+            and only 1 is enough as giving more value does'nt make any difference
+            and position should be relative to use z-index*/
+            position: absolute; 
+            /* absolute position makes the position that it goes to the
+            nearest ancestor and set its position relative to it, here it goes to 
+            it ancestor html because box1 parent div does'nt have a position
+            but if the position for parent is absolute then the child elements 
+            will move relative to parent*/
+            top: 5px;
+            left: 10px ;
+
+            /*
+            position: sticky;/* sticky makes the element stick to its place and 
+            lets other elements scroll below it 
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            padding: 0;
+            margin: 0;*/
+            /*difference between sticky and fixed is that fixed position stays at its 
+            place and does'nt move while sticky is static at first and when scrolled
+            it stays at the top of window and lets other scroll below it*/
+        }
+        .box2{
+            background-color: aqua;
+           /* position: relative;  relative position helps to move the box anywhere
+            as we can use top bottom left right only after using position relative
+            and relative also keeps the box above any other  
+            top: -50px; 
+            left: 20px;*/
+        }
+        .box3{
+            background-color: blueviolet;
+          /*  position: fixed; /* fixed position means that the object becomes
+            fixed and occupies that space and other things can be scrolled but
+            this object doesnt move 
+            bottom: 0;
+            left: 15vw; */
+            
+        }
+        .box4{
+            background-color: sienna;
+        }
+
+        .parent{
+            margin: 30px;
+            padding: 2px;
+            border: 3px solid purple;
+            position: absolute;
+            /* position: fixed; */
+            /* position:sticky; */
+            /* Exception:  
+            transform: translate(0);
+            filter: invert(0); 
+            perspective: 0em;
+            these properties make it seem like position
+            and so the parent is treated as positioned so it may make a bug 
+            so be careful*/
+        }
+    </style>
+    <!-- tranform, filter and perspective properties can also make an
+     element appear as positioned -->
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    <!-- Relative - Apni orginal position se change hogi
+Absolute - apne parent ke relative position change hogi
+Fixed - page mein position fixed hojaygi
+Sticky - page mein kahin bhi ho, scroll krne pr neeche nhi jaygi, stick hojaygi -->
+</body>
+</html>

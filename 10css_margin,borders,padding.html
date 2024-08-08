@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Boxmodel</title>
+    <style>
+        *{
+            margin: 0;      /* emmet m:0 */
+            padding: 0;     /*emet p:0 */
+        }
+      .box {
+        background-color: aqua;
+      }
+      .box1{
+        color: red;
+        padding: 10px;
+        margin: 5px;
+        border: 4px solid black;
+        height: 50px;
+        box-sizing: border-box; /* this means that the height here 
+        50 includes padding and border with content */
+      }
+      .box2{
+        color: blue;
+        padding: 10px;
+        margin: 5px;
+        border: 4px solid black;
+        height: 100px;
+        box-sizing: border-box;
+      }
+
+      /* margin collapse occurs when margins of two or more box 
+      fall on each other but only max margin gets applied on collapse */ 
+    </style>
+  </head>
+  <body>
+    <div class="box box1">I am a box.</div>
+    <div class="box box2">I am box2.</div>  
+</body>
+</html>

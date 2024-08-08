@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows & Outlines</title>
+    <style>
+        .box{
+            border: 2px solid rgb(0, 0, 0);
+            padding: 34px;
+            box-shadow:5px 5px 10px 5px #da4343; /*it is easier to test shadow in inspect on browser */
+        }
+        .para{
+            text-shadow: 2px 2px 4px #888888;
+            outline: 4px dashed black; /* outline is not a part of box model so it doesnt occupy space */
+            border: 4px solid red; /*outline always follows border and change with change in shape of border*/
+            border-radius: 34px; /*it makes the edge circular*/ 
+            outline-offset: 4px; /*it creates space between outline and border */
+
+        }
+/* box-shadow: h-offset v-offset blur spread color inset;
+h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+blur: The larger the value, the blurrier the shadow.
+spread: Expands or shrinks the shadow size.
+color: Defines the shadow color.
+inset: Makes the shadow inner. */
+
+/* text-shadow: h-offset v-offset blur color; */
+
+/* outlines
+        outline: width style color;
+width: Sets the outline width.
+style: Determines the style of the outline such as solid, dotted, or dashed.
+color: Sets the outline color. */
+    </style>
+</head>
+<body>
+    <div class="box">I am a Box</div>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ullam voluptate, error maiores voluptatem quo. Commodi suscipit quis nesciunt autem blanditiis error quibusdam obcaecati voluptates eveniet! Repudiandae iusto cum quis!</p>
+</body>
+</html>
