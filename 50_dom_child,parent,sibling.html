@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Child, Parent & Sibling Nodes</title>
+    <style>
+        .box{
+            height: 45px;
+            width: 56px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- this is comment node -->
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+
+    <script>
+        console.log("Hello World")
+        console.log(document.body)
+        document.body.childNodes    // u will get text between divs because the space between the container div and next 
+        // box div is a text node and so on space between everyone of them is text node
+        document.body.childNodes[0] //returns part after body
+        document.body.childNodes[1] //returns the container class and elements inside it
+        document.body.childNodes[1].childNodes
+        let cont = document.body.childNodes[1]
+        cont.firstChild
+        cont.lastChild
+        cont.firstElementChild //this ignores the text nodes and returns element child
+        cont.lastElementChild.style.color = "red"
+        cont.lastElementChild.style.backgroundColor = "aqua"
+
+        cont.lastElementChild.parentElement //returns the parent element of given element
+
+        document.body.firstElementChild.children //this include on element children nodes of parent node
+        document.body.firstElementChild.children[2].nextElementSibling
+        document.body.firstElementChild.children[2].previousElementSibling
+        document.body.firstElementChild.children[2].previousSibling
+
+        // there are also table links to change table like
+        // table.rows, table.caption, table.thead, table.tbodies, tbody.rows, etc
+        // document.body.children[1].rows
+        // document.body.children[1].thead
+
+    </script>
+</body>
+</html>
