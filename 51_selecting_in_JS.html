@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting by IDs, Classes and More</title>
+    <style>
+        .box{
+            height: 34px;
+            width: 34px;
+            margin: 34px;
+            padding: 34px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hakuna Matata 1</div>
+        <div class="box">Hakuna Matata 2</div>
+        <div id="aquabox" class="box">Hakuna Matata 3</div>
+        <div class="box">Hakuna Matata 4</div>
+        <div class="box">Hakuna Matata 5</div>
+    </div>
+
+    <!-- when elements are close to each other then u can use parent child sibling nodes to make
+     changes but if the elements are faraway then use id selectors or more
+     the id selector has getElementById because id is unique and only a single element as a particular id
+     whereas the same class can be given to many elements and thus it is getElementsByClassName -->
+    <script>
+        console.log("Hello")
+        // let boxes = document.getElementsByClassName("box")
+        // console.log(boxes)
+        // boxes[2].style.backgroundColor = "aqua"
+        document.getElementById("aquabox").style.backgroundColor = "aqua" 
+
+        document.querySelector(".box").style.backgroundColor = "red" //this only selects and changes to first element with class box
+        document.querySelector(".box").style.backgroundColor = "red" //this only selects and changes to first element with class box
+        console.log(document.querySelectorAll(".box")) //this selects all the elements with class box and it retuns a html collection of all 
+
+        // to use querySelectorAll u need to use loop to access each element and u can use any loop u want 
+        document.querySelectorAll(".box").forEach(e => {
+            // e.style.backgroundColor = "red"
+        })
+        document.getElementsByTagName("div")
+
+        // Element.matches(css) - to check if element matches the given css structure
+        // element.closest(css) - to check for nearest ancestor that matches the given css selector 
+        // eleementA.contains(element) - returns true if element b is element a 
+
+    </script>
+</body>
+</html>
